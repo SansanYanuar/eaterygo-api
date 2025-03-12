@@ -22,7 +22,13 @@ app.use("/api/sales", salesRoutes);
 app.use("/api/sales-item", salesItemRoutes);
 app.use("/api/add-sales", addSalesRoutes);
 app.use("/api/add-sales-item", addSalesItemRoutes);
-const PORT = process.env.PORT || 3000;
+
+app.get("/", (req, res) => {
+  res.send("🚀 EateryGo API is running on Vercel!");
+});
+
+/* const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🚀 Server berjalan di http://localhost:${PORT}`);
 });
+ */
